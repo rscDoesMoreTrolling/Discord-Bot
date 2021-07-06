@@ -29,9 +29,7 @@ client.on('message', async message =>{
     if(!command) command = client.commands.get(client.aliases.get(cmd));
     if(command) command.run(client, message, args) 
 })
-client.login(token)
-
-//testing afk command
+//testing
 if(db.has(`afk.${message.author.id}+${message.guild.id}`)) {
         const info = db.get(`afk.${message.author.id}+${message.guild.id}`)
         await db.delete(`afk.${message.author.id}+${message.guild.id}`)
@@ -43,3 +41,5 @@ if(db.has(`afk.${message.author.id}+${message.guild.id}`)) {
         }
         }else return;
     }else;
+
+client.login(token)
