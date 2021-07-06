@@ -1,7 +1,7 @@
 const {Collection, Client, Discord} = require('discord.js')
 const fs = require('fs')
 const client = new Client({
-    disableEveryone: true
+    disableEveryone: false
 })
 const config = require('./config.json');
 const { Player } = require('discord-player');
