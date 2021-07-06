@@ -5,6 +5,7 @@ const client = new Client({
 })
 const config = require('./config.json')
 const prefix = config.prefix
+const db = require('quick.db')
 const token = config.token
 client.commands = new Collection();
 client.aliases = new Collection();
@@ -29,3 +30,16 @@ client.on('message', async message =>{
     if(command) command.run(client, message, args) 
 })
 client.login(token)
+
+//testing afk command
+if(db.has(`afk-${message.author.id}+${message.guild.id}`)) {
+        const info = db.get(`afk-${message.author.id}+${message.guild.id}`)
+        await db.delete(`afk-${message.author.id}+${message.guild.id}`)
+        message.reply(`Your afk status have been removed (${info})`)
+    }
+    if(message.mentions.members.first()) {
+        if(db.has(`afk-${message.mentions.members.first().id}+${message.guild.id}`)) {
+            message.channel.send(message.mentions.members.first().user.tag + ":" + db.get(`afk-${message.mentions.members.first().id}+${message.guild.id}`))
+        }else return;
+    }else;
+//testing

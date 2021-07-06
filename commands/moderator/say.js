@@ -1,6 +1,6 @@
 module.exports = {
   name: "say",
-  description: "Get the bot to say what ever you want!",
+  description: "Bot Will Say If You Say ",
   usage: "<msg>",
   run: async (bot, message, args) => {
     if (!message.member.permissions.has("ADMINISTRATOR")) return;
