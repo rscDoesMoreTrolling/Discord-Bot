@@ -10,7 +10,11 @@
     "snekfetch": "^4.0.4",
     "something-random-on-discord": "^3.4.4",
     "canvacord": "^5.2.1",
-    "imageapi.js": "^1.7.0"
+    "imageapi.js": "^1.7.0",
+    "mathjs": "^9.4.3",
+    "node-fetch": "^2.6.1",
+    "weather-js": "^2.0.0"
+    
   },
   "devDependencies": {},
   "scripts": {
