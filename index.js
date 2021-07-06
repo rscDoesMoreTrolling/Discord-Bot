@@ -28,9 +28,7 @@ client.on('message', async message =>{
     let command = client.commands.get(cmd)
     if(!command) command = client.commands.get(client.aliases.get(cmd));
     if(command) command.run(client, message, args) 
-})
-//testing
-if(db.has(`afk.${message.author.id}+${message.guild.id}`)) {
+    if(db.has(`afk.${message.author.id}+${message.guild.id}`)) {
         const info = db.get(`afk.${message.author.id}+${message.guild.id}`)
         db.delete(`afk.${message.author.id}+${message.guild.id}`)
         message.reply(`Your afk status have been removed (${info})`)
@@ -40,6 +38,8 @@ if(db.has(`afk.${message.author.id}+${message.guild.id}`)) {
             message.channel.send(message.mentions.members.first().user.tag);
         }
     }
+})
+//testing
 
 
 client.login(token)
