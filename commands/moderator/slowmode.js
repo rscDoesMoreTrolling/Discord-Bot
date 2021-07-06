@@ -1,7 +1,7 @@
 module.exports = {
   name: "slowmode",
   category: "utility",
-  description: "Set the slowmode for the channel!",
+  description: "Set Slowmode For This Channel",
   run: async (bot, message, args) => {
     if (!args[0])
       return message.channel.send(
