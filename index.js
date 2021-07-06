@@ -3,7 +3,7 @@ const fs = require('fs')
 const client = new Client({
     disableEveryone: true
 })
-const config = require('./config.js');
+const config = require('./config.json');
 const { Player } = require('discord-player');
 const player = new Player(client);
 client.player = player;
