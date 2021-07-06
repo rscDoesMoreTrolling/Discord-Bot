@@ -1,0 +1,29 @@
+{
+  "name": "discord-bot",
+  "version": "1.0.0",
+  "description": "A Discord-Bot",
+  "main": "index.js",
+  "dependencies": {
+    "@mapbox/node-pre-gyp": "^1.0.5",
+    "ascii-table": "0.0.9",
+    "discord.js": "^12.5.3",
+    "snekfetch": "^4.0.4",
+    "something-random-on-discord": "^3.4.4",
+    "canvacord": "^5.2.1",
+    "imageapi.js": "^1.7.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NekoIceCream/discord-bot.git"
+  },
+  "author": "NekoIceCream",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/NekoIceCream/discord-bot/issues"
+  },
+  "homepage": "https://github.com/NekoIceCream/discord-bot#readme"
+}
