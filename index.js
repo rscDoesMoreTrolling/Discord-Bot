@@ -3,8 +3,7 @@ const fs = require('fs')
 const client = new Client({
     disableEveryone: true
 })
-const config = require('./config.json')
-//testing #1
+const config = require('./config.js');
 const { Player } = require('discord-player');
 const player = new Player(client);
 client.player = player;
@@ -31,8 +30,7 @@ fs.readdir('./player-events/', (err, files) => {
 //mongodb $1
 // Using Node.js `require()`
 const mongoose = require('mongoose');
-import mongoose from 'mongoose';
-await mongoose.connect('mongodb://localhost/my_database', {
+ mongoose.connect('mongodb://localhost/my_database', {
   useNewUrlParser: true,
   useUnifiedTopology: true,
   useFindAndModify: false,
@@ -70,10 +68,13 @@ client.on('message', async message =>{
     }
     if(message.mentions.members.first()) {
         if(db.has(`afk.${message.mentions.members.first().id}+${message.guild.id}`)){
+            message.channel.s
             message.channel.send(message.mentions.members.first().user.tag);
+        }
         }
     }
 })
+
 
 
 client.login(token)
