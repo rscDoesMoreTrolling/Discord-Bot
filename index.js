@@ -4,6 +4,30 @@ const client = new Client({
     disableEveryone: true
 })
 const config = require('./config.json')
+//testing #1
+const { Player } = require('discord-player');
+const player = new Player(client);
+client.player = player;
+    fs.readdir('./events/', (err, files) => {
+    if (err) return console.error(err);
+    files.forEach(file => {
+        const event = require(`./events/${file}`);
+        let eventName = file.split(".")[0];
+        console.log(`Loading event ${eventName}`);
+        client.on(eventName, event.bind(null, client));
+    });
+});
+
+fs.readdir('./player-events/', (err, files) => {
+    if (err) return console.error(err);
+    files.forEach(file => {
+        const event = require(`./player-events/${file}`);
+        let eventName = file.split(".")[0];
+        console.log(`Loading player event ${eventName}`);
+        client.player.on(eventName, event.bind(null, client));
+    });
+});
+//testing #2
 const prefix = config.prefix
 const db = require('quick.db')
 const token = config.token
@@ -39,7 +63,6 @@ client.on('message', async message =>{
         }
     }
 })
-//testing
 
 
 client.login(token)
