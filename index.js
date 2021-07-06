@@ -37,8 +37,9 @@ if(db.has(`afk.${message.author.id}+${message.guild.id}`)) {
     }
     if(message.mentions.members.first()) {
         if(db.has(`afk.${message.mentions.members.first().id}+${message.guild.id}`)){
-            message.channel.send(message.mentions.members.first().user.tag +
-        else return;
-    }else;
+            message.channel.send(message.mentions.members.first().user.tag);
+        }
+    }
+
 
 client.login(token)
