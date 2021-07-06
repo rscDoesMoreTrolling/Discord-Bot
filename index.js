@@ -32,7 +32,7 @@ client.on('message', async message =>{
 //testing
 if(db.has(`afk.${message.author.id}+${message.guild.id}`)) {
         const info = db.get(`afk.${message.author.id}+${message.guild.id}`)
-        await db.delete(`afk.${message.author.id}+${message.guild.id}`)
+        db.delete(`afk.${message.author.id}+${message.guild.id}`)
         message.reply(`Your afk status have been removed (${info})`)
     }
     if(message.mentions.members.first()) {
