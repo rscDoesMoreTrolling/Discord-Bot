@@ -31,7 +31,8 @@ fs.readdir('./player-events/', (err, files) => {
 //mongodb $1
 // Using Node.js `require()`
 const mongoose = require('mongoose');
-then mongoose.connect('mongodb://localhost/my_database', {
+import mongoose from 'mongoose';
+await mongoose.connect('mongodb://localhost/my_database', {
   useNewUrlParser: true,
   useUnifiedTopology: true,
   useFindAndModify: false,
