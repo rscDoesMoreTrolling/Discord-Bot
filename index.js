@@ -72,7 +72,7 @@ client.on('message', async message =>{
             message.channel.send(message.mentions.members.first().user.tag);
         }
         }
-    }
+ 
 })
 
 
