@@ -12,7 +12,7 @@
 
 ## README Navigation
 - [Introduction](#introduction)
-- [Installation] (#installation)
+- [Installation](#installation)
 - [License](#license)
 
 ## Introduction
