@@ -1,8 +1,9 @@
+const config = require('../config.json');
 module.exports = (client, message) => {
 
     if (message.author.bot) return;
 
-    const prefix = client.config.prefix;
+    const prefix = config.prefix;
 
     if (message.content.indexOf(prefix) !== 0) return;
 
