@@ -1,4 +1,6 @@
-exports.run = async (client, message) => {
+module.exports = {
+    name : 'resume',
+    run : async(client, message, args) => {
 
     if (!message.member.voice.channel) return message.channel.send(`${client.emotes.error} - You're not in a voice channel !`);
 
@@ -7,5 +9,5 @@ exports.run = async (client, message) => {
     client.player.shuffle(message);
 
     return message.channel.send(`${client.emotes.success} - Queue shuffled **${client.player.getQueue(message).tracks.length}** song(s) !`);
-
+  }
 };
