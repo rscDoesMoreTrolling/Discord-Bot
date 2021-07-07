@@ -26,17 +26,6 @@ fs.readdir('./player-events/', (err, files) => {
         client.player.on(eventName, event.bind(null, client));
     });
 });
-//testing #2
-//mongodb $1
-// Using Node.js `require()`
-const mongoose = require('mongoose');
- mongoose.connect('mongodb://localhost/my_database', {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-  useFindAndModify: false,
-  useCreateIndex: true
-});
-//mongodb #2
 const prefix = config.prefix
 const db = require('quick.db')
 const token = config.token
