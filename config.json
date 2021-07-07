@@ -1,6 +1,5 @@
 {
     "token": "Your_Token",
-    "prefix": "Your_Prefix",
-    "Mongo": "Your_MongoDB"
+    "prefix": "Your_Prefix"
 }
 
