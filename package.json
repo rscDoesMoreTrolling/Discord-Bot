@@ -19,7 +19,8 @@
     "discord-player": "^3.0.2",
     "ffmpeg": "^0.0.4",
     "ffmpeg-static": "^4.4.0",
-    "mongoose": "^5.13.2"
+    "mongoose": "^5.13.2",
+    "salvage.db": "^1.2.4"
 
   },
   "devDependencies": {},
