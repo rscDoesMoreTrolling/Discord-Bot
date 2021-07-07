@@ -1,4 +1,6 @@
-exports.run = async (client, message, args) => {
+module.exports = {
+    name : 'volume',
+    run : async(client, message, args) => {
 
     if (!message.member.voice.channel) return message.channel.send(`${client.emotes.error} - You're not in a voice channel !`);
 
@@ -13,5 +15,5 @@ exports.run = async (client, message, args) => {
     client.player.setVolume(message, parseInt(args[0]));
 
     message.channel.send(`${client.emotes.success} - Volume set to **${args.join(" ")}%** !`);
-
+  }
 };
