@@ -1,4 +1,8 @@
-exports.run = async (client, message) => {
+const embed = require('discord.js')
+
+module.exports = {
+    name : 'np',
+    run : async(client, message, args) => {
 
     if (!message.member.voice.channel) return message.channel.send(`${client.emotes.error} - You're not in a voice channel !`);
 
@@ -31,5 +35,5 @@ exports.run = async (client, message) => {
             timestamp: new Date(),
         },
     });
-
+  }
 };
