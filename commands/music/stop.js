@@ -1,4 +1,6 @@
-exports.run = async (client, message) => {
+module.exports = {
+    name : 'stop',
+    run : async(client, message, args) => {
 
     if (!message.member.voice.channel) return message.channel.send(`${client.emotes.error} - You're not in a voice channel !`);
 
@@ -8,5 +10,5 @@ exports.run = async (client, message) => {
     client.player.stop(message);
 
     message.channel.send(`${client.emotes.success} - Music **stopped** into this server !`);
-
+   }
 };
