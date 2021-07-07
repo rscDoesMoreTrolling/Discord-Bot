@@ -1,5 +1,5 @@
 module.exports = {
-    name : 'play',
+    name : 'clear-queue',
     run : async(client, message, args) => {
 
     if (!message.member.voice.channel) return message.channel.send(`${client.emotes.error} - You're not in a voice channel !`);
