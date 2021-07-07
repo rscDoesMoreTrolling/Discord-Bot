@@ -1,6 +1,10 @@
-exports.run = async (client, message) => {
+const db = require('quick.db')
+const { MessageEmbed } = require('discord.js')
 
-    message.channel.send({
+module.exports = {
+    name : 'help-music',
+    run : async(client, message, args) => {
+      message.channel.send({
         embed: {
             color: 'ORANGE',
             author: { name: 'Help pannel' },
@@ -13,5 +17,5 @@ exports.run = async (client, message) => {
             description: `To use filters, ${client.config.prefix}filter (the filter). Example : ${client.config.prefix}filter 8D.`,
         },
     });
-
-};
+   }
+}
