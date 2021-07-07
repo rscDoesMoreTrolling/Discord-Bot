@@ -12,10 +12,13 @@
 
 ## README Navigation
 - [Introduction](#introduction)
+- [Installation] (#installation)
 - [License](#license)
 
 ## Introduction
 Digi UwU is a Discord bot created by NekoIceCream written in JavaScript with npm, this bot was created for fun and learning on developing with JavaScript.
+
+## Installation
 
 ## License
 Copyright (c) 2021 NekoIceCream
