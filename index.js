@@ -1,9 +1,42 @@
 const {Collection, Client, Discord} = require('discord.js')
 const fs = require('fs')
 const client = new Client({
-    disableEveryone: true
+    disableEveryone: false
 })
-const config = require('./config.json')
+const config = require('./config.json');
+const { Player } = require('discord-player');
+const player = new Player(client);
+client.player = player;
+    fs.readdir('./events/', (err, files) => {
+    if (err) return console.error(err);
+    files.forEach(file => {
+        const event = require(`./events/${file}`);
+        let eventName = file.split(".")[0];
+        console.log(`Loading event ${eventName}`);
+        client.on(eventName, event.bind(null, client));
+    });
+});
+
+fs.readdir('./player-events/', (err, files) => {
+    if (err) return console.error(err);
+    files.forEach(file => {
+        const event = require(`./player-events/${file}`);
+        let eventName = file.split(".")[0];
+        console.log(`Loading player event ${eventName}`);
+        client.player.on(eventName, event.bind(null, client));
+    });
+});
+//testing #2
+//mongodb $1
+// Using Node.js `require()`
+const mongoose = require('mongoose');
+ mongoose.connect('mongodb://localhost/my_database', {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+  useFindAndModify: false,
+  useCreateIndex: true
+});
+//mongodb #2
 const prefix = config.prefix
 const db = require('quick.db')
 const token = config.token
@@ -35,11 +68,13 @@ client.on('message', async message =>{
     }
     if(message.mentions.members.first()) {
         if(db.has(`afk.${message.mentions.members.first().id}+${message.guild.id}`)){
+            message.channel.s
             message.channel.send(message.mentions.members.first().user.tag);
         }
-    }
+        }
+ 
 })
-//testing
+
 
 
 client.login(token)
