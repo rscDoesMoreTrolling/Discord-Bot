@@ -1,4 +1,4 @@
-<h1 align="center">Digi UwU</h1>
+<h1 align="center">Neko UwU</h1>
 
 <div align="center">
 	<a href="https://github.com/NekoIceCream/discord-bot/actions">
@@ -6,11 +6,7 @@
 	</a>
 </div>
 
-<div align="center">
-  Bot created for fun, I guess
-</div>
-
-## README Navigation
+## Navigation
 - [Introduction](#introduction)
 - [Installation](#installation)
 - [License](#license)
