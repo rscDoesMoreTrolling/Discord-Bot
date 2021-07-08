@@ -30,11 +30,6 @@ const prefix = config.prefix
 const db = require('quick.db')
 const token = config.token
 const mongoose = require('mongoose');
-mongoose.connect('config.mongo'),
-{
-    useUnifiedTopology : true,
-    useNewUrlParser : true,
-}
 client.commands = new Collection();
 client.aliases = new Collection();
 client.categories = fs.readdirSync("./commands/");
@@ -69,5 +64,10 @@ client.on('message', async message =>{
         }
  
 })
+mongoose.connect('config.mongo'),
+{
+    useUnifiedTopology : true,
+    useNewUrlParser : true,
+}
 
 client.login(token)
