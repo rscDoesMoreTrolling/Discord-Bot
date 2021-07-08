@@ -9,7 +9,7 @@
 ## Navigation
 - [Introduction](#introduction)
 - [Installation](#installation)
-- [Current Status](#Current Status)
+- [Current Status](#Current-Status)
 - [Plan](#Plan)
 - [License](#license)
 
