@@ -37,7 +37,7 @@ client.categories = fs.readdirSync("./commands/");
 }); 
 client.on('ready', () => {
     console.log(`${client.user.username} ✅`)
-client.user.setActivity(client.config.game);
+client.user.setActivity(client, config, game);
 })
 client.on('message', async message =>{
     if(message.author.bot) return;
