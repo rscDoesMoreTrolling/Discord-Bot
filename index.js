@@ -36,8 +36,8 @@ client.categories = fs.readdirSync("./commands/");
     require(`./handlers/${handler}`)(client);
 }); 
 client.on('ready', () => {
-    client.user.setActivity(`${prefix}help`)
     console.log(`${client.user.username} ✅`)
+client.user.setActivity(client.config.game);
 })
 client.on('message', async message =>{
     if(message.author.bot) return;
