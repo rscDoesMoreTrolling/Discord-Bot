@@ -9,6 +9,8 @@
 ## Navigation
 - [Introduction](#introduction)
 - [Installation](#installation)
+- [Current Status](#Current Status)
+- [Plan](#Plan)
 - [License](#license)
 
 ## Introduction
@@ -33,7 +35,18 @@ Digi UwU is a Discord bot created by NekoIceCream written in JavaScript with npm
    npm start
    ```
 
-*Note: Installation may not up-to-date*
+## Current Status
+1. Music Command [Not Work]
+2. Custom Status [Not Work]
+3. MongoDB Database [Not Work]
+
+## Plan
+1. Fix Bugs
+2. Multi Language
+3. ChatBot
+4. Shard Support (If The Bot Has Entered 2000 Guilds)
+5. Slash Commands
+6. Economy Bot (If MongoDB Fixed)
 
 ## License
 Copyright (c) 2021 NekoIceCream
