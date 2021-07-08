@@ -2,6 +2,6 @@
     "token": "Your_Token",
     "prefix": "Your_Prefix",
     "game": "Your_Game",
-    "mongodb": "Your_MongoDB_URL"
+    "mongo": "Your_MongoDB_URL"
 }
 

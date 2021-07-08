@@ -30,7 +30,7 @@ const prefix = config.prefix
 const db = require('quick.db')
 const token = config.token
 const mongoose = require('mongoose');
-mongoose.connect('config.mongodb'),
+mongoose.connect('config.mongo'),
 {
     useUnifiedTopology : true,
     useNewUrlParser : true,
