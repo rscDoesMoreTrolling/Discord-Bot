@@ -22,8 +22,9 @@ Digi UwU is a Discord bot created by NekoIceCream written in JavaScript with npm
    ```
    {
     "token": "YOUR_TOKEN",
-    "prefix": "YOUR_PREFIX"
-    "game": "YOUR_PLAYING_STATUS"
+    "prefix": "YOUR_PREFIX",
+    "game": "YOUR_PLAYING_STATUS",
+    "mongodb": "Your_MongoDB_URL"
    }
    ```
 3. Install all modules

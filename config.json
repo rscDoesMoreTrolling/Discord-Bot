@@ -1,6 +1,7 @@
 {
     "token": "Your_Token",
     "prefix": "Your_Prefix",
-    "game": "Your_Game"
+    "game": "Your_Game",
+    "mongodb": "Your_MongoDB_URL"
 }
 

@@ -29,6 +29,12 @@ fs.readdir('./player-events/', (err, files) => {
 const prefix = config.prefix
 const db = require('quick.db')
 const token = config.token
+const mongoose = require('mongoose');
+mongoose.connect('config.mongodb'),
+{
+    useUnifiedTopology : true,
+    useNewUrlParser : true,
+}
 client.commands = new Collection();
 client.aliases = new Collection();
 client.categories = fs.readdirSync("./commands/");
@@ -37,7 +43,7 @@ client.categories = fs.readdirSync("./commands/");
 }); 
 client.on('ready', () => {
     console.log(`${client.user.username} ✅`)
-client.user.setActivity(client, config, game);
+client.user.setActivity(client.config.game);
 })
 client.on('message', async message =>{
     if(message.author.bot) return;
@@ -63,7 +69,5 @@ client.on('message', async message =>{
         }
  
 })
-
-
 
 client.login(token)
