@@ -44,6 +44,8 @@ client.on('ready', () => {
 client.user.setActivity(client.config.game);
 })
 client.on('message', async message =>{
+    Schema.findOne({ Guild: message.guild.id}, async (err, data) => { if(!data) return message.channel.send("no data"); if (message.channel.id !== data.Channel) return; chatBot(message, message.channel, message.author.id); });
+
     if(message.author.bot) return;
     if(!message.content.startsWith(prefix)) return;
     if(!message.guild) return;
@@ -67,9 +69,8 @@ client.on('message', async message =>{
         }
  
 })
-Schema.findOne({ Guild: message.guild.id}, async (err, data) => { if(!data) return message.channel.send("no data"); if (message.channel.id !== data.Channel) return; chatBot(message, message.channel, message.author.id); });
 
-mongoose.connect('config.mongo'),
+mongoose.connect(client.config.mongo),
 {
     useUnifiedTopology : true,
     useNewUrlParser : true,
