@@ -39,9 +39,7 @@ client.categories = fs.readdirSync("./commands/");
 ["command"].forEach(handler => {
     require(`./handlers/${handler}`)(client);
 }); 
-warn.on("warn", console.warn);
-error.on("error", console.error);
-ready.on('ready', () => {
+client.on('ready', () => {
     console.log(`${client.user.username} ✅`)
 client.user.setActivity(client.config.game);
 })
