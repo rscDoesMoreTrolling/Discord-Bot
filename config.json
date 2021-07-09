@@ -1,7 +1,7 @@
 {
-    "token": "Your_Token",
-    "prefix": "Your_Prefix",
-    "game": "Your_Game",
-    "mongoose": "Your_MongoDB_URL/(Database_Name)",
+    "token": " ",
+    "prefix": " ",
+    "game": " ",
+    "mongoose": " ",
     "shard": "1"
 }
