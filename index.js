@@ -74,8 +74,8 @@ client.on('message', async message =>{
 
 mongoose.connect(config.mongoose)
 {
-    useUnifiedTopology : true,
-    useNewUrlParser : true,
+    useUnifiedTopology: true,
+    useNewUrlParser: true,
 }
 
 client.login(token)
