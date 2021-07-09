@@ -17,7 +17,7 @@ client.player = player;
         const event = require(`./events/${file}`);
         let eventName = file.split(".")[0];
         console.log(`Loading event ${eventName}`);
-        client.once(eventName, event.bind(null, client));
+        client.player.once(eventName, event.bind(null, client));
     });
 });
 
