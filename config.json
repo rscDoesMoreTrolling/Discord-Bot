@@ -3,5 +3,5 @@
     "prefix": "Your_Prefix",
     "game": "Your_Game",
     "mongoose": "Your_MongoDB_URL/(Database_Name)",
-    "shard": "Total_Your_Shard"
+    "shard": "1"
 }
