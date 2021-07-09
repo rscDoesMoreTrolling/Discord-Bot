@@ -2,7 +2,7 @@
 
 <div align="center">
 	<a href="https://github.com/NekoIceCream/Discord-Bot/actions">
-		<img src="https://github.com/NekoIceCream/Discord-Bot/actions/workflows/checker-ci.yml/badge.svg" alt="Build CI" />
+		<img src="https://github.com/NekoIceCream/Discord-Bot/actions/workflows/checker-ci.yml/badge.svg" alt="Checker CI" />
 	</a>
 </div>
 
@@ -14,7 +14,7 @@
 - [License](https://github.com/NekoIceCream/Discord-Bot/blob/main/LICENSE.md)
 
 ## Introduction
-Digi UwU is a Discord bot created by NekoIceCream written in JavaScript with npm, this bot was created for fun and learning on developing with JavaScript.
+Neko UwU is a Discord bot created by NekoIceCream written in JavaScript with npm, this bot was created for fun and learning on developing with JavaScript.
 
 ## Installation
 1. Fork the repo
@@ -42,10 +42,6 @@ Digi UwU is a Discord bot created by NekoIceCream written in JavaScript with npm
   ```
   node shard.js
   ```
-  or
-  ```
-  npm start
-  ````
 
 ## Current Status
 1. Music Command [Not Work]

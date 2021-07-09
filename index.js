@@ -17,7 +17,7 @@ client.player = player;
         const event = require(`./events/${file}`);
         let eventName = file.split(".")[0];
         console.log(`Loading event ${eventName}`);
-        client.on(eventName, event.bind(null, client));
+        client.player.once(eventName, event.bind(null, client));
     });
 });
 
@@ -39,8 +39,9 @@ client.aliases = new Collection();
 client.categories = fs.readdirSync("./commands/");
 ["command"].forEach(handler => {
     require(`./handlers/${handler}`)(client);
-}); 
-client.on('ready', () => {
+});
+
+client.once('ready', () => {
     console.log(`${client.user.username} ✅`)
 client.user.setActivity(client.config.game);
 })
@@ -64,17 +65,17 @@ client.on('message', async message =>{
     }
     if(message.mentions.members.first()) {
         if(db.has(`afk.${message.mentions.members.first().id}+${message.guild.id}`)){
-            message.channel.s
+
             message.channel.send(message.mentions.members.first().user.tag);
         }
-        }
+       }
  
 })
 
-mongoose.connect(config.mongoose),
-{
-    useUnifiedTopology : true,
-    useNewUrlParser : true,
-}
+mongoose.connect(config.mongoose , {
+
+    useUnifiedTopology: true,
+    useNewUrlParser: true,
+})
 
 client.login(token)
