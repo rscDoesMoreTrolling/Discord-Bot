@@ -2,5 +2,6 @@
     "token": "Your_Token",
     "prefix": "Your_Prefix",
     "game": "Your_Game",
-    "mongoose": "Your_MongoDB_URL/(Database_Name)"
+    "mongoose": "Your_MongoDB_URL/(Database_Name)",
+    "shard": "Total_Your_Shard"
 }

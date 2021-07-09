@@ -1,8 +1,8 @@
 const { ShardingManager } = require('discord.js');
 const bumbe = new ShardingManager('./index.js',
 { 
-	totalShards: 2,
-    token: "TOKEN"
+	totalShards: config.shard,
+    token: config.token
 });
 bumbe.spawn();
 
