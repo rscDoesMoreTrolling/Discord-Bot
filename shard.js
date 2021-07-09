@@ -8,5 +8,5 @@ const bumbe = new ShardingManager('./index.js',
 bumbe.spawn();
 
 bumbe.on('shardCreate', shard => {
-    console.log('[✅${shard.id} ID shard initialized!');
+    console.log('[X]{shard.id} ID shard initialized!');
 });
