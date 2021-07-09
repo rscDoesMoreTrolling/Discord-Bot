@@ -1,5 +1,6 @@
 const {Collection, Client, Discord} = require('discord.js')
 const fs = require('fs')
+const ready = new Discord.Client
 const client = new Client
 ({
     disableEveryone: false
@@ -40,7 +41,7 @@ client.categories = fs.readdirSync("./commands/");
 ["command"].forEach(handler => {
     require(`./handlers/${handler}`)(client);
 }); 
-client.on('ready', () => {
+ready.on('ready', () => {
     console.log(`${client.user.username} ✅`)
 client.user.setActivity(client.config.game);
 })
