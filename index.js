@@ -1,6 +1,6 @@
 const {Collection, Client, Discord} = require('discord.js')
 const fs = require('fs')
-const ready = new Discord.Client
+const ready = new Discord.client
 const client = new Client
 ({
     disableEveryone: false
