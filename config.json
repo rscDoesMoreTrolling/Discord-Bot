@@ -1,6 +1,7 @@
 {
-    "token": "Your_Token",
-    "prefix": "Your_Prefix",
-    "game": "Your_Game"
+    "token": " ",
+    "prefix": " ",
+    "game": " ",
+    "mongoose": " ",
+    "shard": "1"
 }
-

@@ -6,6 +6,9 @@ const client = new Client({
 const config = require('./config.json');
 const { Player } = require('discord-player');
 const player = new Player(client);
+const { chatBot } = require("reconlx");
+const schema = require("./models/chatbot-channel");
+
 client.player = player;
     fs.readdir('./events/', (err, files) => {
     if (err) return console.error(err);
@@ -29,17 +32,22 @@ fs.readdir('./player-events/', (err, files) => {
 const prefix = config.prefix
 const db = require('quick.db')
 const token = config.token
+const mongoose = require('mongoose');
 client.commands = new Collection();
 client.aliases = new Collection();
 client.categories = fs.readdirSync("./commands/");
 ["command"].forEach(handler => {
     require(`./handlers/${handler}`)(client);
 }); 
-client.on('ready', () => {
+warn.on("warn", console.warn);
+error.on("error", console.error);
+ready.on('ready', () => {
     console.log(`${client.user.username} ✅`)
-client.user.setActivity(client, config, game);
+client.user.setActivity(client.config.game);
 })
 client.on('message', async message =>{
+    schema.findOne({ Guild: message.guild.id}, async (err, data) => { if(!data) return message.channel.send("no data"); if (message.channel.id !== data.Channel) return; chatBot(message, message.channel, message.author.id); });
+
     if(message.author.bot) return;
     if(!message.content.startsWith(prefix)) return;
     if(!message.guild) return;
@@ -64,6 +72,10 @@ client.on('message', async message =>{
  
 })
 
-
+mongoose.connect(config.mongoose),
+{
+    useUnifiedTopology : true,
+    useNewUrlParser : true,
+}
 
 client.login(token)
