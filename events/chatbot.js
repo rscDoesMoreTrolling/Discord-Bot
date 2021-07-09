@@ -1,6 +1,6 @@
 const { chatBot } = require("reconlx");
 const client = require("../index");
-const Schema = require("../models/chatbot-channel");
+const schema = require("../models/chatbot-channel");
 client.on("message", async (message) => {
     console.log("ChatBotworking");
     if (!message.guild || message.author.bot) return;

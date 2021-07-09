@@ -1,5 +1,5 @@
 const { client, message, MessageEmbed } = require('discord.js');
-const Schema = require('../../models/chatbot-channel');
+const schema = require('../../models/chatbot-channel');
 module.exports = {
     name : 'set-chatbot',
     category : 'Fun',
