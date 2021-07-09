@@ -2,7 +2,7 @@
   "name": "discord-bot",
   "version": "1.8.0",
   "description": "A Discord Bot: Made With Love In This World",
-  "main": "index.js",
+  "main": "shard.js",
   "dependencies": {
     "@mapbox/node-pre-gyp": "^1.0.5",
     "ascii-table": "0.0.9",
@@ -25,7 +25,7 @@
   },
   "devDependencies": {},
   "scripts": {
-    "test": "node index.js"
+    "test": "node shard.js"
   },
   "repository": {
     "type": "git",
