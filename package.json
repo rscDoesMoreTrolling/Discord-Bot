@@ -20,7 +20,8 @@
     "ffmpeg": "^0.0.4",
     "ffmpeg-static": "^4.4.0",
     "mongoose": "^5.13.2",
-    "reconlx": "^1.2.41"
+    "reconlx": "^1.2.41",
+    "dotenv": "^8.2.0"
 
   },
   "devDependencies": {},
@@ -30,6 +31,9 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/NekoIceCream/discord-bot.git"
+  },
+  "engines": {
+    "node": "14.x"
   },
   "author": "NekoIceCream",
   "license": "MIT",
