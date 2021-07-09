@@ -7,7 +7,7 @@ const shards = new ShardingManager("./index.js",
 
 {
   token: process.config.token,
-  totalShards: config.shard,
+  totalShards: process.config.shard,
   respawn: true,
   execArgv: ['--trace-warnings'],
   shardArgs: ['--ansi', '--color']
