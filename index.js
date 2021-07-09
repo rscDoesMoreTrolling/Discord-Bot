@@ -72,7 +72,7 @@ client.on('message', async message =>{
  
 })
 
-mongoose.connect(config.mongoose),
+mongoose.connect(config.mongoose)
 {
     useUnifiedTopology : true,
     useNewUrlParser : true,
