@@ -38,7 +38,7 @@ Digi UwU is a Discord bot created by NekoIceCream written in JavaScript with npm
 
 ## Current Status
 1. Music Command [Not Work]
-2. Custom Status [Not Work]
+2. Custom Status [Not Work] [In Progress]
 3. MongoDB Database [Not Work] [In Progress]
 
 ## Plan

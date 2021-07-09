@@ -6,6 +6,9 @@ const client = new Client({
 const config = require('./config.json');
 const { Player } = require('discord-player');
 const player = new Player(client);
+const { chatBot } = require("reconlx");
+const Schema = require("../models/chatbot-channel");
+
 client.player = player;
     fs.readdir('./events/', (err, files) => {
     if (err) return console.error(err);
@@ -64,6 +67,7 @@ client.on('message', async message =>{
         }
  
 })
+Schema.findOne({ Guild: message.guild.id}, async (err, data) => { if(!data) return message.channel.send("no data"); if (message.channel.id !== data.Channel) return; chatBot(message, message.channel, message.author.id); });
 
 mongoose.connect('config.mongo'),
 {
