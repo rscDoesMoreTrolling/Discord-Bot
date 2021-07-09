@@ -30,7 +30,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/NekoIceCream/discord-bot.git"
+    "url": "git+https://github.com/NekoIceCream/Discord-Bot.git"
   },
   "engines": {
     "node": "14.x"
@@ -38,7 +38,7 @@
   "author": "NekoIceCream",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/NekoIceCream/discord-bot/issues"
+    "url": "https://github.com/NekoIceCream/Discord-Bot/issues"
   },
-  "homepage": "https://github.com/NekoIceCream/discord-bot#readme"
+  "homepage": "https://github.com/NekoIceCream/Discord-Bot#readme"
 }
