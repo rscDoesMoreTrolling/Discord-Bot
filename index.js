@@ -39,14 +39,11 @@ client.aliases = new Collection();
 client.categories = fs.readdirSync("./commands/");
 ["command"].forEach(handler => {
     require(`./handlers/${handler}`)(client);
-}); 
-client.once('ready', () => {
-    console.log(`${client.user.username} ✅`)
-client.user.setActivity(client.config.game);
-})
+});
 client.once('message', async message =>{
     schema.findOne({ Guild: message.guild.id}, async (err, data) => { if(!data) return message.channel.send("no data"); if (message.channel.id !== data.Channel) return; chatBot(message, message.channel, message.author.id); });
-
+    console.log(`${client.user.username} ✅`)
+    client.user.setActivity(client.config.game);
     if(message.author.bot) return;
     if(!message.content.startsWith(prefix)) return;
     if(!message.guild) return;
