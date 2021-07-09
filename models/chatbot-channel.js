@@ -5,4 +5,4 @@ const schema = mongoose.Schema({
   Channel: String,
 })
 
-module.exports = mongoose.model("chatbot", Schema)
+module.exports = mongoose.model("chatbot", schema)
