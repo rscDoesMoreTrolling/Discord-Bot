@@ -6,7 +6,7 @@ require('dotenv').config();
 const shards = new ShardingManager("./index.js",
 
 {
-  token: process.config.token,
+  token: config.token,
   totalShards: process.config.shard,
   respawn: true,
   execArgv: ['--trace-warnings'],
