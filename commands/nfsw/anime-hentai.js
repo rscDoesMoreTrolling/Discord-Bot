@@ -5,7 +5,7 @@ const Discord = require('discord.js')
 module.exports = {
   name: "hentai-anime",
   category: "nsfw",
-description: "Sends a random image/gif of a cumsluts",
+description: "Send Anime Hentai About Cum!",
 usage: "[command]",
 run: async (client, message, args, level) => {
     
