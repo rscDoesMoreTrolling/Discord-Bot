@@ -4,8 +4,7 @@ const random = Random
 module.exports = {
   name: "neko",
    category: "fun",
-  
-  description: "give you random neko",
+  description:  "Send random neko!",
 run: async (client, message, args) => {
 
 if(!message.channel.nsfw) return message.reply('channel must be nfsw or die');
