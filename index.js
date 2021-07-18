@@ -8,7 +8,7 @@ const config = require('./config.json');
 const { Player } = require('discord-player');
 const player = new Player(client);
 const { chatBot } = require("reconlx");
-const schema = require("./models/chatbot-channel");
+const Schema = require("./models/chatbot-channel");
 
 client.player = player;
     fs.readdir('./events/', (err, files) => {

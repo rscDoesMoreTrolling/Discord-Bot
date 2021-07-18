@@ -14,7 +14,7 @@ module.exports = {
     run : async(bot, message, args) => {
         if(!message.member.permissions.has("ADMINISTRATOR")) return message.channel.send("You dont have permission to use this command sadly :(");
         const channel = message.mentions.channels.first() || message.channel;
-        schema.findOne({ Guild: message.guild.id}, async (err, data) => {
+        Schema.findOne({ Guild: message.guild.id}, async (err, data) => {
             if (data) data.delete();
             new Schema({
                 Guild: message.guild.id,
