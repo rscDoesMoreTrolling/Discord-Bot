@@ -1,8 +1,8 @@
 const mongoose = require('mongoose');
 
-const schema = mongoose.Schema({
+const schema = mongoose.schema({
   Guild: String,
   Channel: String,
 })
 
-module.exports = mongoose.model("chatbot", Schema)
+module.exports = mongoose.model("chatbot", schema)
