@@ -13,7 +13,8 @@ const shards = new ShardingManager("./index.js",
   shardArgs: ['--ansi', '--color']
 });
 
-shards.on("shardCreate", shard => {
+shards.on("shardCreate", shard =>
+{
   console.log(`[${new Date().toString().split(" ", 5).join(" ")}] Launched shard #${shard.id}`)
 });
 

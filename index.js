@@ -1,9 +1,11 @@
 const {Collection, Client, Discord} = require('discord.js')
 const fs = require('fs')
+
 const client = new Client
 ({
     disableEveryone: false
 })
+
 const config = require('./config.json');
 const { Player } = require('discord-player');
 const player = new Player(client);
@@ -11,9 +13,11 @@ const { chatBot } = require("reconlx");
 const schema = require("./models/chatbot-channel");
 
 client.player = player;
-    fs.readdir('./events/', (err, files) => {
+    fs.readdir('./events/', (err, files) => 
+    {
     if (err) return console.error(err);
-    files.forEach(file => {
+    files.forEach(file => 
+        {
         const event = require(`./events/${file}`);
         let eventName = file.split(".")[0];
         console.log(`Loading event ${eventName}`);
@@ -21,9 +25,11 @@ client.player = player;
     });
 });
 
-fs.readdir('./player-events/', (err, files) => {
+fs.readdir('./player-events/', (err, files) => 
+{
     if (err) return console.error(err);
-    files.forEach(file => {
+    files.forEach(file => 
+        {
         const event = require(`./player-events/${file}`);
         let eventName = file.split(".")[0];
         console.log(`Loading player event ${eventName}`);
@@ -37,17 +43,24 @@ const mongoose = require('mongoose');
 client.commands = new Collection();
 client.aliases = new Collection();
 client.categories = fs.readdirSync("./commands/");
-["command"].forEach(handler => {
+["command"].forEach(handler => 
+    {
     require(`./handlers/${handler}`)(client);
 });
 
-client.once('ready', () => {
+client.once('ready', () => 
+{
     console.log(`${client.user.username} ✅`)
 client.user.setActivity(client.config.game);
 })
-client.on('message', async message =>{
-    schema.findOne({ Guild: message.guild.id}, async (err, data) => { if(!data) return message.channel.send("no data"); if (message.channel.id !== data.Channel) return; chatBot(message, message.channel, message.author.id); });
-
+client.on('message', async message =>
+{
+    schema.findOne({ Guild: message.guild.id}, async (err, data) => 
+    { 
+    if(!data) return message.channel.send("no data"); 
+    if (message.channel.id !== data.Channel) return; 
+    chatBot(message, message.channel, message.author.id); 
+});
     if(message.author.bot) return;
     if(!message.content.startsWith(prefix)) return;
     if(!message.guild) return;
@@ -72,7 +85,8 @@ client.on('message', async message =>{
  
 })
 
-mongoose.connect(config.mongoose , {
+mongoose.connect(config.mongoose , 
+    {
 
     useUnifiedTopology: true,
     useNewUrlParser: true,

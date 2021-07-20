@@ -3,7 +3,7 @@ const schema = require('../../models/chatbot-channel');
 module.exports = {
     name : 'set-chatbot',
     usage: "<msg>",
-    description : 'chat bot command to chatting with me!',
+    description : 'chatting with me!',
 
     /**
      * @param {Client} client
@@ -11,15 +11,19 @@ module.exports = {
      * @param {String[]} args
      */
 
-    run : async(bot, message, args) => {
-        if(!message.member.permissions.has("ADMINISTRATOR")) return message.channel.send("You dont have permission to use this command sadly :(");
+    run : async(bot, message, args) => 
+    {
+        if(!message.member.permissions.has("ADMINISTRATOR")) 
+        return message.channel.send("You dont have permission to use this command");
         const channel = message.mentions.channels.first() || message.channel;
-        schema.findOne({ Guild: message.guild.id}, async (err, data) => {
+        Schema.findOne({ Guild: message.guild.id}, async (err, data) => 
+        {
             if (data) data.delete();
             new Schema({
                 Guild: message.guild.id,
                 Channel: channel.id,
-            }).save();
+            })
+            .save();
             message.channel.send(`Saved chatbot channel to ${channel}`)
         });
 
