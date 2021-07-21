@@ -19,11 +19,10 @@ Neko UwU is a Discord bot created by NekoIceCream written in JavaScript with npm
 ## Installation
 1. Fork the repo
 2. Edit your token at `discord-bot/config.json`
-   ```
+     ```
    {
     "token": "YOUR_TOKEN",
     "prefix": "YOUR_PREFIX",
-    "game": "YOUR_PLAYING_STATUS",
     "mongoose": "YOUR_MONGODB_URL/(DATABASE_NAME)",
     "shard": "TOTAL_YOUR_SHARD"
    }
@@ -45,14 +44,15 @@ Neko UwU is a Discord bot created by NekoIceCream written in JavaScript with npm
 
 ## Current Status
 1. Music Command [Not Work]
-2. Custom Status [Not Work] [In Progress]
-3. MongoDB Database [Not Work] [In Progress]
+2. Custom Status [Not Work] [In Progress To Fix]
+3. MongoDB Database [Not Work] [In Progress To Fix]
+4. Activity Status [Not Work]
 
 ## Plan
 1. Fix Bugs
 2. Multi Language
-3. ChatBot [In Progress]
-4. Shard Support [In Progress]
+3. ChatBot [In Progress To Fix]
+4. Shard Support [In Progress To Fix]
 5. Slash Commands
 6. Economy Bot (If MongoDB Fixed)
 7. Website

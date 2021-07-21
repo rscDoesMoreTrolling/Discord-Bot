@@ -20,7 +20,7 @@ client.player = player;
         {
         const event = require(`./events/${file}`);
         let eventName = file.split(".")[0];
-        console.log(`Loading event ${eventName}`);
+        //console.log(`Loading event ${eventName}`);
         client.player.once(eventName, event.bind(null, client));
     });
 });
@@ -32,7 +32,7 @@ fs.readdir('./player-events/', (err, files) =>
         {
         const event = require(`./player-events/${file}`);
         let eventName = file.split(".")[0];
-        console.log(`Loading player event ${eventName}`);
+        //console.log(`Loading player event ${eventName}`);
         client.player.on(eventName, event.bind(null, client));
     });
 });
@@ -51,13 +51,13 @@ client.categories = fs.readdirSync("./commands/");
 client.once('ready', () => 
 {
     console.log(`${client.user.username} ✅`)
-client.user.setActivity(client.config.game);
 })
+
 client.on('message', async message =>
 {
     schema.findOne({ Guild: message.guild.id}, async (err, data) => 
     { 
-    if(!data) return message.channel.send("no data"); 
+    //if(!data) return message.channel.send("no data"); 
     if (message.channel.id !== data.Channel) return; 
     chatBot(message, message.channel, message.author.id); 
 });
@@ -71,14 +71,17 @@ client.on('message', async message =>
     let command = client.commands.get(cmd)
     if(!command) command = client.commands.get(client.aliases.get(cmd));
     if(command) command.run(client, message, args) 
-    if(db.has(`afk.${message.author.id}+${message.guild.id}`)) {
+    if(db.has(`afk.${message.author.id}+${message.guild.id}`)) 
+    {
         const info = db.get(`afk.${message.author.id}+${message.guild.id}`)
         db.delete(`afk.${message.author.id}+${message.guild.id}`)
         message.reply(`Your afk status have been removed (${info})`)
     }
-    if(message.mentions.members.first()) {
-        if(db.has(`afk.${message.mentions.members.first().id}+${message.guild.id}`)){
-
+    if(message.mentions.members.first()) 
+    {
+        if(db.has(`afk.${message.mentions.members.first().id}+${message.guild.id}`
+        ))
+        {
             message.channel.send(message.mentions.members.first().user.tag);
         }
        }
