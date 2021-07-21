@@ -31,10 +31,6 @@ Neko UwU is a Discord bot created by NekoIceCream written in JavaScript with npm
    ```
    npm i
    ```
-   Or (Only For Linux User!)
-   ```
-   bash install.sh
-   ```
 4. Start your bot 
 
 - With Shard
@@ -45,6 +41,7 @@ Neko UwU is a Discord bot created by NekoIceCream written in JavaScript with npm
   ```
   node index.js
   ```
+
 ## Current Status
 1. Music Command [Not Work]
 2. Custom Status [Not Work] [In Progress To Fix]
