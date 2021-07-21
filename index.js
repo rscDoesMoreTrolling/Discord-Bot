@@ -96,3 +96,5 @@ mongoose.connect(config.mongoose ,
 })
 
 client.login(token)
+
+// Copyright (c) 2021 NekoIceCream
