@@ -55,7 +55,7 @@ client.once('ready', () =>
 
 client.on('message', async message =>
 {
-    schema.findOne({ Guild: message.guild.id}, async (err, data) => 
+    Schema.findOne({ Guild: message.guild.id}, async (err, data) => 
     { 
     //if(!data) return message.channel.send("no data"); 
     if (message.channel.id !== data.Channel) return; 
@@ -96,3 +96,5 @@ mongoose.connect(config.mongoose ,
 })
 
 client.login(token)
+
+// Copyright (c) 2021 NekoIceCream
