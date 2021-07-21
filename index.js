@@ -57,7 +57,7 @@ client.on('message', async message =>
 {
     schema.findOne({ Guild: message.guild.id}, async (err, data) => 
     { 
-    if(!data) return message.channel.send("no data"); 
+    //if(!data) return message.channel.send("no data"); 
     if (message.channel.id !== data.Channel) return; 
     chatBot(message, message.channel, message.author.id); 
 });
@@ -77,9 +77,11 @@ client.on('message', async message =>
         db.delete(`afk.${message.author.id}+${message.guild.id}`)
         message.reply(`Your afk status have been removed (${info})`)
     }
-    if(message.mentions.members.first()) {
-        if(db.has(`afk.${message.mentions.members.first().id}+${message.guild.id}`)){
-
+    if(message.mentions.members.first()) 
+    {
+        if(db.has(`afk.${message.mentions.members.first().id}+${message.guild.id}`
+        ))
+        {
             message.channel.send(message.mentions.members.first().user.tag);
         }
        }
