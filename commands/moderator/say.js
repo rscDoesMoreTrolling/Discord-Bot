@@ -4,7 +4,7 @@ module.exports = {
   usage: "<msg>",
   run: async (bot, message, args) => {
     if (!message.member.permissions.has("ADMINISTRATOR")) return;
-    let MSG = message.content.split(`${bot.prefix}say `).join(" ");
+    let MSG = message.content.split(args[0]).join(" ");
     if (!MSG)
       return message.channel.send(`You did not specify your message to send!`);
     message.channel.send(MSG);
